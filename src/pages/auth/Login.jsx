@@ -33,7 +33,7 @@ const Login = () => {
     };
 
     try {
-      const response = await fetch('http://localhost:8000/v1/auth/login/', config);
+      const response = await fetch('http://54.94.34.148:8000/v1/auth/login/', config);
       console.log(response);
 
       if (response.status === 401) {

@@ -8,7 +8,7 @@ const HeaderStock = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await fetch('http://localhost:8000/v1/stock/info/dashboard');
+        const response = await fetch('http://54.94.34.148:8000/v1/stock/info/dashboard');
         const data = await response.json();
         setDashboardData(data);
       } catch (error) {

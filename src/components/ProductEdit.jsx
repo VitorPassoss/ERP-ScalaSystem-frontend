@@ -22,7 +22,7 @@ export default function ProductEdit({editItem}) {
       body: JSON.stringify(stockData)
     };
 
-    fetch('http://localhost:8000/v1/stock/'+editItem, config)
+    fetch('http://54.94.34.148:8000/v1/stock/'+editItem, config)
       .then((data) => {
         setLoading(false);
         window.location.reload();
@@ -34,7 +34,7 @@ export default function ProductEdit({editItem}) {
   }, []);
 
   const fetchData = () => {
-    fetch('http://localhost:8000/v1/stock/details/'+editItem)
+    fetch('http://54.94.34.148:8000/v1/stock/details/'+editItem)
       .then((res) => res.json())
       .then((data) => {
         SetProduct(data);

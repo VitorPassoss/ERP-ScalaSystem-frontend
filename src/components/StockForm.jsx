@@ -8,7 +8,7 @@ export default function StockForm() {
   const [productList, setProductList] = useState([]);
 
   useEffect(() => {
-    fetch('http://localhost:8000/v1/products/')
+    fetch('http://54.94.34.148:8000/v1/products/')
       .then((res) => res.json())
       .then((data) => {
         setProductList(data);
@@ -32,7 +32,7 @@ export default function StockForm() {
       body: JSON.stringify(stockData)
     };
 
-    fetch('http://localhost:8000/v1/stock/', config)
+    fetch('http://54.94.34.148:8000/v1/stock/', config)
       .then((data) => {
         setLoading(false);
         window.location.reload();

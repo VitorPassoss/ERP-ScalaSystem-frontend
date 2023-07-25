@@ -284,14 +284,14 @@ export default function TableProducts() {
       },
     };
 
-    fetch(`http://localhost:8000/v1/products/details${itemId}`, config)
+    fetch(`http://54.94.34.148:8000/v1/products/details${itemId}`, config)
       .then((data) => {
         window.location.reload();
       });
   };
 
   const fetchData = () => {
-    fetch('http://localhost:8000/v1/products/')
+    fetch('http://54.94.34.148:8000/v1/products/')
       .then((res) => res.json())
       .then((data) => {
         const formattedData = data.map((item, index) =>
@@ -380,7 +380,7 @@ export default function TableProducts() {
   };
 
   const fetchProductDetails = (id) => {
-    fetch(`http://localhost:8000/v1/supplie/details/${id}`)
+    fetch(`http://54.94.34.148:8000/v1/supplie/details/${id}`)
       .then(response => response.json())
       .then(data => {
         setProductDetails(data);

@@ -10,7 +10,7 @@ const links = [
   { name: 'Estoque', route: '/', icon: <HomeIcon color="primary" /> },
   { name: 'Produtos', route: '/products', icon: <InfoIcon color="primary" /> },
   { name: 'Fornecedores', route: '/supplie', icon: <ContactsIcon color="primary" /> },
-  { name: 'Administração', route: 'http://localhost:8000/admin', icon: <ContactsIcon color="primary" /> }
+  { name: 'Administração', route: 'http://54.94.34.148:8000/admin', icon: <ContactsIcon color="primary" /> }
 ];
 
 const Sidebar = () => {
@@ -29,7 +29,7 @@ const Sidebar = () => {
       }
     };
 
-    fetch('http://localhost:8000/v1/auth/user/', config)
+    fetch('http://54.94.34.148:8000/v1/auth/user/', config)
       .then((res) => res.json())
       .then((data) => {
         setUserData(data);

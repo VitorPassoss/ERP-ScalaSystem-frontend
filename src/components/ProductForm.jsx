@@ -18,7 +18,7 @@ const [nameProduct, setNameProduct] = useState("");
 
 
 useEffect(() => {
-    fetch('http://localhost:8000/v1/products/supplie/')
+    fetch('http://54.94.34.148:8000/v1/products/supplie/')
       .then((res) => res.json())
       .then((data) => {
         console.log(data)
@@ -62,7 +62,7 @@ useEffect(() => {
       body: JSON.stringify(productData)
     };
 
-    fetch('http://localhost:8000/v1/products/', config)
+    fetch('http://54.94.34.148:8000/v1/products/', config)
       .then((data) => {
         setLoading(false);
         window.location.reload();
